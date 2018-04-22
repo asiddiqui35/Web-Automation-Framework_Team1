@@ -26,7 +26,7 @@ public class CommonAPI {
         System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://www.amazon.com");
+        driver.get(url);
         driver.manage().window().maximize();
     }
     @AfterMethod
