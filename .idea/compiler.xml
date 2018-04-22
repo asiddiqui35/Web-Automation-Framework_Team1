@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Amazon" />
+        <module name="BankOfAmerica" />
+        <module name="BestBuy" />
+        <module name="FaceBook" />
+        <module name="Fidelis" />
+        <module name="generic" />
+        <module name="HBO" />
+        <module name="TDBank" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Amazon" target="1.5" />
+      <module name="BankOfAmerica" target="1.5" />
+      <module name="BestBuy" target="1.5" />
+      <module name="FaceBook" target="1.5" />
+      <module name="Fidelis" target="1.5" />
+      <module name="generic" target="1.5" />
+      <module name="HBO" target="1.5" />
+      <module name="TDBank" target="1.5" />
+      <module name="WebAutomation1" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
