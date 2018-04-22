@@ -56,9 +56,7 @@ public class CommonAPI {
         }catch (Exception ex){
             driver.findElement(By.id(locator)).sendKeys(value);
         }
-
     }
-
     public void clickByXpath(String locator) {
         driver.findElement(By.xpath(locator)).click();
     }
@@ -132,7 +130,6 @@ public class CommonAPI {
         String st = driver.findElement(By.name(locator)).getText();
         return st;
     }
-
     public List<String> getListOfString(List<WebElement> list) {
         List<String> items = new ArrayList<String>();
         for (WebElement element : list) {
@@ -140,7 +137,6 @@ public class CommonAPI {
         }
         return items;
     }
-
     public void selectOptionByVisibleText(WebElement element, String value) {
         Select select = new Select(element);
         select.selectByVisibleText(value);
@@ -158,23 +154,19 @@ public class CommonAPI {
             WebElement element = driver.findElement(By.cssSelector(locator));
             Actions action = new Actions(driver);
             action.moveToElement(element).perform();
-
         }
-
     }
     public void mouseHoverByXpath(String locator){
         try {
             WebElement element = driver.findElement(By.xpath(locator));
             Actions action = new Actions(driver);
             Actions hover = action.moveToElement(element);
-        }catch(Exception ex){
+        }catch(Exception ex) {
             System.out.println("First attempt has been done, This is second try");
             WebElement element = driver.findElement(By.cssSelector(locator));
             Actions action = new Actions(driver);
             action.moveToElement(element).perform();
-
         }
-
     }
     //handling Alert
     public void okAlert(){
@@ -212,7 +204,6 @@ public class CommonAPI {
         } catch (Exception e) {
             System.out.println("Exception while taking screenshot "+e.getMessage());;
         }
-
     }
     //Taking Screen shots
     public void takeScreenShot()throws IOException {
@@ -257,6 +248,4 @@ public class CommonAPI {
         driver1.switchTo().window(newTabs.get(0));
         return driver1;
     }
-
-
 }
