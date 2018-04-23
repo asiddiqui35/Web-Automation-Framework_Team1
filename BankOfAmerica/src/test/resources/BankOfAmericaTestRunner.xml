@@ -12,7 +12,7 @@
     <parameter name = "url" value = "https://www.bankofamerica.com"/>
 
 
-    <test name = "BOA Home">
+    <test name = "BOA home">
         <classes>
             <class name="testHome.TestHome"/>
         </classes>
