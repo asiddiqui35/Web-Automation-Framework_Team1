@@ -30,7 +30,7 @@ public class CommonAPI {
         driver.manage().window().maximize();
     }
     @AfterMethod
-    public void afterMethod() {
+   public void afterMethod() {
         driver.close();
     }
     public void clickOnCss(String locator){

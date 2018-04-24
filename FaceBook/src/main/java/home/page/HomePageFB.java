@@ -4,6 +4,8 @@ import base.CommonAPI;
 import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class HomePageFB extends CommonAPI{
     public String checkBrowser() {
@@ -11,6 +13,20 @@ public class HomePageFB extends CommonAPI{
         return title;
     }
     public void checkSignIn(){
-        driver.findElement(By.xpath("//input[@class='inputtext' and @name='email']")).click();
+        driver.findElement(By.id("email")).sendKeys("UserName");
+        driver.findElement(By.id("password")).sendKeys("password");
+        driver.findElement(By.id("login")).sendKeys("Login");
         }
+
+
+
+
+
+
+
+
+
+
+
+
 }
