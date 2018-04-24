@@ -7,16 +7,18 @@ import org.testng.annotations.Test;
 public class TestPageFB extends HomePageFB {
 
     @Test
-    public void TestcheckBrowser() {
+    public void testcheckBrowser() {
         Assert.assertEquals( checkBrowser(),"Facebook - Log In or Sign Up");
-        driver.findElement(By.xpath("//input[@class='inputtext' and @name='email']")).sendKeys("maya813r@yahoo.com");
-        driver.findElement(By.xpath("//*[@id=\'pass\']")).sendKeys("@mirtumi001");
-        driver.findElement(By.xpath("//*[@id=\"u_0_2\"]")).click();
+        driver.findElement(By.xpath("//input[@class='inputtext' and @name='email']")).sendKeys("");
+        driver.findElement(By.xpath("//*[@id=\'pass\']")).sendKeys("");
+       // driver.findElement(By.xpath("//*[@id=\"u_0_2\"]")).click();
+        driver.findElement(By.xpath("//*[@id=\"login_form\"]/table/tbody/tr[3]/td[2]/div/a")).click();
         }
-    @Test
-    public void NewsFeedLink() {
-        driver.findElement(By.xpath("//*[@id=\"navItem_217974574879787\"]/a/div")).click();
+     public void Registration(){
 
-    }
+     }
+
+
+
 
 }
