@@ -14,7 +14,7 @@
 
     <test name = "Amazon home">
         <classes>
-           <class name="page.object.model.TestHomePage"/>
+           <class name="page.object.model.TestDropDownMenu"/>
         </classes>
     </test>
 

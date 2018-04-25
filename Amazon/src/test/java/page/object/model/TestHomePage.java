@@ -1,18 +1,17 @@
 package page.object.model;
 
 import org.testng.Assert;
-import page.object.model.HomePage;
 import org.testng.annotations.Test;
 
-public class TestHomePage extends HomePage{
+public class TestHomePage extends HomePage {
 
     @Test
-    public void testHome(){
-        viewHomePage();
+    public void testHomePage() {
+        openHomePage();
 
         String actualtitle = driver.getTitle();
-        Assert.assertEquals(actualtitle,"Amazon.com: Amazon Prime");
+        Assert.assertEquals(actualtitle, "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more");
         System.out.println("Testing: Passed");
-    }
 
+    }
 }
