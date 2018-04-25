@@ -16,7 +16,12 @@ public class HomePageFB extends CommonAPI{
         driver.findElement(By.id("email")).sendKeys("UserName");
         driver.findElement(By.id("password")).sendKeys("password");
         driver.findElement(By.id("login")).sendKeys("Login");
+        driver.findElement(By.id("forgot account")).click();
         }
+    public void registration(){
+        driver.findElement(By.cssSelector("First Name")).sendKeys("Maya");
+
+    }
 
 
 
