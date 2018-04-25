@@ -19,6 +19,7 @@ public class HomePageFB extends CommonAPI{
         driver.findElement(By.id("forgot account")).click();
         }
     public void registration(){
+        driver.findElement(By.cssSelector("First Name")).sendKeys("Maya");
 
     }
 

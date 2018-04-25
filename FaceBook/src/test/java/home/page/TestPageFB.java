@@ -15,7 +15,7 @@ public class TestPageFB extends HomePageFB {
         driver.findElement(By.xpath("//*[@id=\"login_form\"]/table/tbody/tr[3]/td[2]/div/a")).click();
         }
      public void Registration(){
-
+        driver.findElement(By.cssSelector("//*[@id=\"u_0_o\"]")).sendKeys();
      }
 
 
