@@ -15,9 +15,9 @@ public class NextTab extends CommonAPI{
         handleNewTab(driver);
         String oldTab = driver.getWindowHandle();
         List<String> newTabs = new ArrayList<String>(driver.getWindowHandles());
-        newTabs.remove(oldTab);
-        driver.switchTo().window(newTabs.get(0));
-        //clickByXpath("//*[@id=\"section-featured-jobs\"]/div[2]/table/tbody/tr[4]/td[1]/a");
+       // newTabs.remove(oldTab);
+        driver.switchTo().window(newTabs.get(1));
+        clickByXpath("//*[@id=\"section-featured-jobs\"]/div[2]/table/tbody/tr[4]/td[1]/a");
         return driver;
     }
 }
