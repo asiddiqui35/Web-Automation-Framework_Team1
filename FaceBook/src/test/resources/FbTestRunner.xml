@@ -1,5 +1,5 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
-        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Facebook Automation Script " parallel="false" >
 
@@ -14,9 +14,10 @@
 
 <test name = "Facebook Home Page">
     <classes>
-        <class name="home.page.TestPageFB"/>
-
-
+        <!--<class name="home.page.TestLoginPage"/>-->
+        <!--<class name="home.page.TestRegistrationPage"/>-->
+        <!--<class name="home.page.TestLanguagePage"/>-->
+        <class name="home.page.PostingOnWall"/>
 
 
     </classes>
