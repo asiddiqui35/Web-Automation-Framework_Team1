@@ -10,15 +10,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-
-/**
- * Created by mrahman on 04/02/18.
- */
-
 public class ConnectDB {
-
     public static MongoDatabase mongoDatabase = null;
-
     public static Connection connect = null;
     public static Statement statement = null;
     public static PreparedStatement ps = null;
@@ -165,9 +158,6 @@ public class ConnectDB {
             e.printStackTrace();
         }
     }
-
-
-
     public void insertProfileToMySql(String tableName, String columnName1, String columnName2)
     {
         try {
