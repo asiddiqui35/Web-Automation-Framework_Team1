@@ -12,7 +12,7 @@ public class HomePageFB extends CommonAPI{
         String title = driver.getTitle();
         return title;
     }
-    public void checkSignIn(){
+    public void checkSignIn() {
         driver.findElement(By.id("email")).sendKeys("UserName");
         driver.findElement(By.id("password")).sendKeys("password");
         driver.findElement(By.id("login")).sendKeys("Login");

@@ -23,7 +23,7 @@ public class CommonAPI {
     public WebDriver driver = null;
     @Parameters({"url"})
     @BeforeMethod
-    public void setUp(@Optional("https://www.hbo.com")  String url) {
+    public void setUp(@Optional("https://bankofamerica.com")  String url) {
         System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -250,5 +250,9 @@ public class CommonAPI {
         newTabs.remove(oldTab);
         driver1.switchTo().window(newTabs.get(0));
         return driver1;
+    }
+    public static boolean isPopUpWindowDisplayed(WebDriver driver1, String locator){
+        boolean value = driver1.findElement(By.cssSelector(locator)).isDisplayed();
+        return value;
     }
 }
