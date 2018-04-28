@@ -10,12 +10,12 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Amazon</module>
-        <module>BestBuy</module>
         <module>FaceBook</module>
         <module>HBO</module>
         <module>generic</module>
         <module>Fidelis</module>
         <module>BankOfAmerica</module>
+        <module>Walmart</module>
     </modules>
     <dependencyManagement>
         <dependencies>
