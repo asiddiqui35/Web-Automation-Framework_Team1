@@ -23,6 +23,7 @@ public class CommonAPI {
     public WebDriver driver = null;
     @Parameters({"url"})
     @BeforeMethod
+
     public void setUp(@Optional("https://walmart.com") String url) {
         System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
         driver = new ChromeDriver();
@@ -32,7 +33,7 @@ public class CommonAPI {
     }
     @AfterMethod
    public void afterMethod() {
-        driver.close();
+        driver.quit();
     }
     public void clickOnCss(String locator){
         driver.findElement(By.cssSelector(locator)).click();
