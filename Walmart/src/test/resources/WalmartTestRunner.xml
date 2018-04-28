@@ -14,7 +14,7 @@
 
     <test name = "walmart home">
         <classes>
-            <class name="page.object.model.TestHome"/>
+            <class name="page.object.model.TestWalmartPickUp"/>
         </classes>
     </test>
 
