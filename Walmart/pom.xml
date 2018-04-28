@@ -8,7 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>Amazon</artifactId>
+    <artifactId>Walmart</artifactId>
     <dependencies>
         <dependency>
             <groupId>Web-Automation-Framework_Team1</groupId>
@@ -18,15 +18,21 @@
     </dependencies>
     <build>
         <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.20.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>
-                            target/test-classes/AmazonTestRunner.xml
-                        </suiteXmlFile>
+                        <suiteXmlFile> target/test-classes/WalmartTestRunner.xml </suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

@@ -14,10 +14,10 @@
 
 <test name = "Facebook Home Page">
     <classes>
-        <!--<class name="home.page.TestLoginPage"/>-->
+        <class name="home.page.TestLoginPage"/>
         <!--<class name="home.page.TestRegistrationPage"/>-->
         <!--<class name="home.page.TestLanguagePage"/>-->
-        <class name="home.page.PostingOnWall"/>
+        <!--<class name="home.page.PostingOnWall"/>-->
 
 
     </classes>

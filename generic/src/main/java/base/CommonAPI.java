@@ -31,9 +31,9 @@ public class CommonAPI {
         driver.manage().window().maximize();
     }
     @AfterMethod
-//   public void afterMethod() {
-//        driver.close();
-//    }
+        public void afterMethod() {driver.quit();
+    }
+
     public void clickOnCss(String locator){
         driver.findElement(By.cssSelector(locator)).click();
     }
