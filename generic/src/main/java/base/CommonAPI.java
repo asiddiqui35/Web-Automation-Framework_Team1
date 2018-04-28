@@ -23,7 +23,11 @@ public class CommonAPI {
     public WebDriver driver = null;
     @Parameters({"url"})
     @BeforeMethod
+ moyna
     public void setUp(@Optional("https://www.facebook.com/") String url) {
+
+    public void setUp(@Optional("https://walmart.com") String url) {
+ master
         System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -31,9 +35,12 @@ public class CommonAPI {
         driver.manage().window().maximize();
     }
     @AfterMethod
-//   public void afterMethod() {
-//        driver.close();
-//    }
+ moyna
+ public void afterMethod() {     driver.close();  }
+   public void afterMethod() {
+        driver.quit();
+    }
+master
     public void clickOnCss(String locator){
         driver.findElement(By.cssSelector(locator)).click();
     }
