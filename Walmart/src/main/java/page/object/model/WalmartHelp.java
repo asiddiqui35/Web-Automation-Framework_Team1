@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class WalmartHelp extends CommonAPI{
 
-
     @FindBy(xpath = "//*[@id=\"header-GlobalEyebrowNav-link-7\"]")
     WebElement help;
 
@@ -41,6 +40,5 @@ public class WalmartHelp extends CommonAPI{
         selectPlates.click();
 
         plate.click();
-
     }
 }
