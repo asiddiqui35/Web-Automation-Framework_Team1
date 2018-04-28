@@ -24,7 +24,6 @@ public class CommonAPI {
 
     @Parameters({"url"})
     @BeforeMethod
-
     public void setUp(@Optional("https://www.google.com/") String url) {
         System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
         driver = new ChromeDriver();
@@ -34,7 +33,6 @@ public class CommonAPI {
     }
 
     @AfterMethod
-
         public void afterMethod() {driver.quit();
     }
 
