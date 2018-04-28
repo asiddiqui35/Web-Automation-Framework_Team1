@@ -23,7 +23,8 @@ public class CommonAPI {
     public WebDriver driver = null;
     @Parameters({"url"})
     @BeforeMethod
-    public void setUp(@Optional("https://www.hbo.com")  String url) {
+
+    public void setUp(@Optional("https://walmart.com") String url) {
         System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
