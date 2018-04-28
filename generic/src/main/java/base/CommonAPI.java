@@ -24,7 +24,8 @@ public class CommonAPI {
 
     @Parameters({"url"})
     @BeforeMethod
-    public void setUp(@Optional("https://bankofamerica.com") String url) {
+
+    public void setUp(@Optional("https://www.google.com/") String url) {
         System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -33,11 +34,18 @@ public class CommonAPI {
     }
 
     @AfterMethod
+
+        public void afterMethod() {driver.quit();
+    }
+
+    public void clickOnCss(String locator){
+
     public void afterMethod() {
         driver.quit();
     }
 
     public void clickOnCss(String locator) {
+
         driver.findElement(By.cssSelector(locator)).click();
     }
 
