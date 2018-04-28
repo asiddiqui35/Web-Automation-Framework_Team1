@@ -41,7 +41,7 @@ public class Registration {
         Lastname.sendKeys("Begum");
         Email.sendKeys("abcd123@gmail.com");
         Password.sendKeys("abcd123");
-        
+
 
 
     }
