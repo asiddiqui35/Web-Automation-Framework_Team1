@@ -99,7 +99,7 @@ public class Registration {
         waitUntilVisible(By.id("month"));
 */
     }
-}
+
 
 
 
