@@ -12,4 +12,12 @@ public class HomePage extends CommonAPI {
         Assert.assertEquals(title, "Bank of America - Banking, Credit Cards, home Loans and Auto Loans");
         System.out.println("Unit Testing: passed");
     }
+    public void checkLanguage(){
+        clickOnCss("#NAV_EN_ES");
+    }
+    public void locationDropdown(){
+        clickOnCss("#footer_bofa_locations");
+        clickOnCss("#rioSearchFilterLabel");
+        clickOnCss("#spid4413");
+    }
 }

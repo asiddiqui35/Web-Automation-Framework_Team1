@@ -12,9 +12,9 @@
     <parameter name = "url" value = "https://www.amazon.com"/>
 
 
-    <test name = "Amazon home">
+    <test name = "Amazon">
         <classes>
-           <class name="page.object.model.TestHomePage"/>
+           <class name="page.object.model.TestSignIn"/>
         </classes>
     </test>
 
