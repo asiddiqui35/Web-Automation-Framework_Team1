@@ -4,7 +4,7 @@ import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SignIn {
+public class SignIn extends CommonAPI{
 
     @FindBy(xpath = "//*[@id=\"nav-link-accountList\"]/span[2]")
     WebElement account;
@@ -32,7 +32,7 @@ public class SignIn {
         account.click();
         inputEmail.sendKeys("nizizidiot@gmail.com");
         proceed.click();
-        password.sendKeys("myamazon");
+        password.sendKeys("xxxxxxxxx");
         submit.click();
         myAccount.click();
         myOrders.click();

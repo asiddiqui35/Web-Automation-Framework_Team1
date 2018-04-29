@@ -14,7 +14,7 @@
 
     <test name = "Amazon">
         <classes>
-           <class name="page.object.model.TestSignIn"/>
+           <class name="page.object.model.TestDropDownMenu"/>
         </classes>
     </test>
 
