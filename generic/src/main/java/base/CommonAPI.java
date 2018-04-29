@@ -38,12 +38,6 @@ public class CommonAPI {
         public void afterMethod() {driver.quit();
     }
 
-    public void clickOnCss(String locator){
-
-    public void afterMethod() {
-        driver.quit();
-    }
-
     public void clickOnCss(String locator) {
 
         driver.findElement(By.cssSelector(locator)).click();
