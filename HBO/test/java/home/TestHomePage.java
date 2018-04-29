@@ -1,10 +1,8 @@
 package home;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-public class TestHome extends Home{
+public class TestHomePage extends HomePage {
     @Test //test1
     public void testHome(){
         clickSearch();

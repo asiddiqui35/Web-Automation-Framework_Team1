@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Registration {
+<<<<<<< HEAD
 
     @FindBy(name="firstname")
     WebElement Firstname;
@@ -45,6 +46,29 @@ public class Registration {
 
 
     }
+=======
+
+    @FindBy(name = "firstname") WebElement Firstname;
+
+    @FindBy(name = "lastname") WebElement Lastname;
+
+    @FindBy(name = "reg_email__") WebElement Email;
+
+    @FindBy(name = "reg_passwd__") WebElement Password;
+
+
+    public void Registering() {
+        Firstname.sendKeys("Maya");
+        Lastname.sendKeys("Begum");
+        Email.sendKeys("abcd123@gmail.com");
+        Password.sendKeys("abcd123");
+
+    }
+
+}
+
+
+>>>>>>> e1ffec6f8c03a7df57a5cb7309cc310a3b47e5f5
 
 
 
@@ -60,6 +84,7 @@ public class Registration {
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -79,6 +104,48 @@ public class Registration {
 //        driver.findElement(By.xpath("//*[@id='month']")).click();
 //        driver.findElement(By.xpath("//*[@id='month']/option[4]")).click();
 //
+=======
+//
+//
+//
+////        driver.findElement(By.name("firstname")).sendKeys("maya");
+////        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+////
+////        driver.findElement(By.name("lastname")).sendKeys("Begum");
+////        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+////
+////        driver.findElement(By.name("reg_email__")).sendKeys("abcd@gmail.com");
+////        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+////
+////        driver.findElement(By.name("reg_passwd__")).sendKeys("abc123");
+////
+////        driver.findElement(By.xpath("//*[@id='month']")).click();
+////        driver.findElement(By.xpath("//*[@id='month']/option[4]")).click();
+////
+////        driver.findElement(By.xpath("//*[@id=\"day\"]")).click();
+////        driver.findElement(By.xpath("//*[@id=\"day\"]/option[3]")).click();
+////
+////        driver.findElement(By.xpath("//*[@id=\"year\"]")).click();
+////        driver.findElement(By.xpath("//*[@id=\"year\"]/option[30]")).click();
+////
+//////        driver.findElement(By.xpath("//*[@id=\"u_0_12\"]/span[1]/label")).click();
+//////        driver.findElement(By.xpath("//*[@id=\"u_0_12\"]/span[2]/label")).click();
+////
+////        driver.findElement(By.name("websubmit")).click();
+////
+////        driver.findElement(By.xpath("//*[@id=\"reg_pages_msg\"]/a")).click();
+//
+//
+
+//        //WebElement element=driver.findElement(By.id("month"));
+//        /*Actions ac = new Actions(driver);
+//        ac.moveToElement(element).click();
+//        waitUntilVisible(By.id("month"));
+//*/
+//    }
+//}
+
+>>>>>>> e1ffec6f8c03a7df57a5cb7309cc310a3b47e5f5
 //        driver.findElement(By.xpath("//*[@id=\"day\"]")).click();
 //        driver.findElement(By.xpath("//*[@id=\"day\"]/option[3]")).click();
 //
@@ -100,6 +167,10 @@ public class Registration {
 */
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e1ffec6f8c03a7df57a5cb7309cc310a3b47e5f5
 
 
 
