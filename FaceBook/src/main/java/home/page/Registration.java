@@ -86,6 +86,7 @@ public class Registration {
 ////        driver.findElement(By.xpath("//*[@id=\"reg_pages_msg\"]/a")).click();
 //
 //
+
 //        //WebElement element=driver.findElement(By.id("month"));
 //        /*Actions ac = new Actions(driver);
 //        ac.moveToElement(element).click();
@@ -93,6 +94,29 @@ public class Registration {
 //*/
 //    }
 //}
+
+//        driver.findElement(By.xpath("//*[@id=\"day\"]")).click();
+//        driver.findElement(By.xpath("//*[@id=\"day\"]/option[3]")).click();
+//
+//        driver.findElement(By.xpath("//*[@id=\"year\"]")).click();
+//        driver.findElement(By.xpath("//*[@id=\"year\"]/option[30]")).click();
+//
+////        driver.findElement(By.xpath("//*[@id=\"u_0_12\"]/span[1]/label")).click();
+////        driver.findElement(By.xpath("//*[@id=\"u_0_12\"]/span[2]/label")).click();
+//
+//        driver.findElement(By.name("websubmit")).click();
+//
+//        driver.findElement(By.xpath("//*[@id=\"reg_pages_msg\"]/a")).click();
+
+
+        //WebElement element=driver.findElement(By.id("month"));
+        /*Actions ac = new Actions(driver);
+        ac.moveToElement(element).click();
+        waitUntilVisible(By.id("month"));
+*/
+    }
+
+
 
 
 

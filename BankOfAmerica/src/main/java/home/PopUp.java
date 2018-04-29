@@ -15,7 +15,6 @@ public class PopUp extends CommonAPI {
     public void goToPopUp() {
         clickOnCss("#footer_bofa_feedback");
     }
-
     public WebDriver popUpClick(WebDriver driver1) {
         String oldTab = driver1.getWindowHandle();
         List<String> newTabs = new ArrayList<String>(driver1.getWindowHandles());

@@ -10,6 +10,6 @@ public class TestSignIn extends CommonAPI{
     public void testAccountSignIn() throws InterruptedException{
         SignIn aa = PageFactory.initElements(driver, SignIn.class);
         System.out.println(driver.getTitle()+ " " + driver.getCurrentUrl());
-        aa.sn();
+        aa.signIn();
     }
 }
