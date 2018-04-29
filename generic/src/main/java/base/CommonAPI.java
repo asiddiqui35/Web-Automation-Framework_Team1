@@ -85,7 +85,6 @@ public class CommonAPI {
         }
         driver.quit();
     }
-
     @AfterSuite
     public void generateReport() {
         extent.close();
