@@ -113,8 +113,7 @@ public class Registration {
         /*Actions ac = new Actions(driver);
         ac.moveToElement(element).click();
         waitUntilVisible(By.id("month"));
-*/
-    }
+}*/
 
 
 
