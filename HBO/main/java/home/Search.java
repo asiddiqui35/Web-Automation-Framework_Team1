@@ -21,7 +21,6 @@ public class Search extends CommonAPI{
     public void setSearchName(WebElement searchName) {
         this.searchName = searchName;
     }
-
     public List<String> getItemValue(){
         List<String > itemList = new ArrayList<String >();
         itemList.add("Game of Thrones");
@@ -29,9 +28,7 @@ public class Search extends CommonAPI{
         itemList.add("Walking Dead");
         itemList.add("Lost");
         return itemList;
-
     }
-
     public void setSearchInputField(WebElement searchInputField) {
 
         this.searchInputField = searchInputField;
@@ -46,7 +43,6 @@ public class Search extends CommonAPI{
             getSearchName().click();
             //getSearchInputField() is equivalnet to -->driver.findElements(By.cssSelector(locator));
             getSearchInputField().sendKeys(items, Keys.ENTER);
-
         }
     }
 }
