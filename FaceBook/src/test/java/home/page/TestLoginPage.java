@@ -7,10 +7,10 @@ import org.testng.annotations.Test;
 public class TestLoginPage extends CommonAPI {
 
     @Test
-    public void TestLoginPage() throws InterruptedException{
-        LoginPage loginpage = PageFactory.initElements(driver, LoginPage.class);
-        System.out.println(driver.getTitle()+" "+driver.getCurrentUrl());
-        loginpage.LoginPage();
+    public void testingSignIn() throws InterruptedException {
+        LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+
+
     }
 }
 
