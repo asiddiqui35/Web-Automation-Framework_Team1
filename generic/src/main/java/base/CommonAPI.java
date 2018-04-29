@@ -67,10 +67,6 @@ public class CommonAPI {
         ExtentTestManager.getTest().getTest().setStartedTime(getTime(result.getStartMillis()));
         ExtentTestManager.getTest().getTest().setEndedTime(getTime(result.getEndMillis()));
 
-        public void afterMethod() {driver.quit();
-    }
-
-    public void clickOnCss(String locator) {
         for (String group : result.getMethod().getGroups()) {
             ExtentTestManager.getTest().assignCategory(group);
         }
@@ -89,7 +85,6 @@ public class CommonAPI {
         }
         driver.quit();
     }
-
     @AfterSuite
     public void generateReport() {
         extent.close();
