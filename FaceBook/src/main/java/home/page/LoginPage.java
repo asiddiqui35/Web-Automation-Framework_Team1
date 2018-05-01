@@ -9,24 +9,53 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
 
 public class LoginPage extends CommonAPI{
-
     @FindBy(xpath = "//*[@id=\"email\"]")
-    WebElement Email;
-    @FindBy(name = "pass")
-    WebElement Password;
-    @FindBy(id = "u_0_2")
-    WebElement Login;
+    public WebElement Email;
 
-    public void enterEmail() {
-        Email.sendKeys("bmaya2013@gmail.com");
+    public WebElement getPassword() {
+        return Password;
     }
-    public void enterPassword() {
-        Password.sendKeys("abc123@");
+
+    public void setPassword(WebElement password) {
+        Password = password;
     }
-    public void clickLogin(){
+
+    @FindBy(name = "pass")
+    public WebElement Password;
+
+    public WebElement getLogin() {
+        return Login;
+    }
+
+    public void setLogin(WebElement login) {
+        Login = login;
+    }
+
+    @FindBy(id = "u_0_2")
+    public WebElement Login;
+
+    public WebElement getEmail() {
+        return Email;
+    }
+
+    public void setEmail(WebElement email) {
+        this.Email = email;
+    }
+
+
+    public void email() {
+        getEmail().sendKeys("bmaya2013@gmail.com");
+
+    }
+     public void passWord() {
+            Password.sendKeys("abc123@");
+        }
+        public void clickingLogin(){
         Login.click();
+
+         }
     }
-}
+
 
 
 
