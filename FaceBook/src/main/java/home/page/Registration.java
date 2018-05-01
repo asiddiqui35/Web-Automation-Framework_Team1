@@ -1,5 +1,6 @@
 package home.page;
 
+
 import base.CommonAPI;
 
 import org.apache.bcel.generic.Select;
@@ -37,10 +38,6 @@ public class Registration {
 
     }
 }
-
-
-
-
 
 
 
