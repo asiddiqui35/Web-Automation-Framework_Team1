@@ -14,9 +14,7 @@
 
     <test name = "HBO home">
         <classes>
-            <!--<class name="home.TestNext"/>-->
-            <!--<class name="home.SearchTest"/>-->
-            <!--<class name="home.TestHomePage"/>-->
+            <class name="dataDrivenTest.TVSeriesesTest"/>
         </classes>
     </test>
 
