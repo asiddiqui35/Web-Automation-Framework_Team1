@@ -48,5 +48,9 @@ public class HomePage extends CommonAPI {
         Thread.sleep(2000);
         driver.navigate().back();
     }
+    public void collectAlllink() {
+
+
+    }
 
 }

@@ -5,8 +5,9 @@ import org.testng.annotations.Test;
 
 public class TestEvents extends SearchEvents {
     @Test
-    public void eventsNearme(){
-        SearchEvents sE =PageFactory.initElements(driver, SearchEvents.class);
+    public void evenNearme(){
+         SearchEvents sE =PageFactory.initElements(driver,SearchEvents.class);
         sE.searchForevent();
-    }
+        }
 }
+

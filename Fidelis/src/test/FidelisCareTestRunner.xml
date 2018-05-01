@@ -14,8 +14,9 @@
 
     <test name = "Fidelis Care">
         <classes>
-            <class name="home.page.model.TestHomePage"/>
-            <class name="home.page.model.TestEvents"/>
+            <!--<class name="home.page.model.TestHomePage"/>-->
+            <!--<class name="home.page.model.TestEvents"/>-->
+            <class name="home.page.model.TestSigningUp"/>
         </classes>
     </test>
 
