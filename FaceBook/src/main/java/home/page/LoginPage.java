@@ -8,7 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
 
-public class LoginPage extends CommonAPI{
+public class LoginPage extends CommonAPI {
+
+    public void LoginPage() {
+        Email.sendKeys("bmaya2013@gmail.com");
+        Password.sendKeys("abc123@");
+        Login.click();
+    }
 
     @FindBy(xpath = "//*[@id=\"email\"]")
     WebElement Email;
@@ -20,15 +26,16 @@ public class LoginPage extends CommonAPI{
     public void enterEmail() {
         Email.sendKeys("bmaya2013@gmail.com");
     }
+
     public void enterPassword() {
         Password.sendKeys("abc123@");
     }
-    public void clickLogin(){
+
+    public void clickLogin() {
         Login.click();
+
     }
 }
-
-
 
 
 
