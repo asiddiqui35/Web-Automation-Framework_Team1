@@ -15,7 +15,7 @@ public class LogIn extends CommonAPI{
         username.sendKeys("aftabrabbi3");
     }
     public void enterPassword(){
-        password.sendKeys("xxxxxx");
+        password.sendKeys("melia133");
     }
     public void clickSignIn(){
         signin.click();
