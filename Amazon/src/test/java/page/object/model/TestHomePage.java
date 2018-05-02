@@ -12,8 +12,6 @@ public class TestHomePage extends HomePage{
         String actualtitle = driver.getTitle();
         System.out.println("Testing: Passed!");
 
-
-
     }
 
 }
