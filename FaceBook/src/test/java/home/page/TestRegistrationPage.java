@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 public class TestRegistrationPage extends Registration{
 
     @Test
-       public void testRegistration() throws InterruptedException {Registering();} }
+    public void testRegistration() throws InterruptedException {
+    }
+}
 
 
