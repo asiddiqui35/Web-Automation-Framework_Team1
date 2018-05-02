@@ -128,14 +128,14 @@ public class CommonAPI {
                 driver = new ChromeDriver();
             } else if (browserName.equalsIgnoreCase("firefox")) {
                 if (OS.equalsIgnoreCase("OS X")) {
-                    System.setProperty("webdriver.gecko.driver", "../Generic/browser-driver/geckodriver");
+                    System.setProperty("webdriver.gecko.driver", "../generic/browser-driver/geckodriver");
                 } else if (OS.equalsIgnoreCase("Windows")) {
-                    System.setProperty("webdriver.gecko.driver", "../Generic/browser-driver/geckodriver.exe");
+                    System.setProperty("webdriver.gecko.driver", "../generic/browser-driver/geckodriver.exe");
                 }
                 driver = new FirefoxDriver();
 
             } else if (browserName.equalsIgnoreCase("ie")) {
-                System.setProperty("webdriver.ie.driver", "../Generic/browser-driver/IEDriverServer.exe");
+                System.setProperty("webdriver.ie.driver", "../generic/browser-driver/IEDriverServer.exe");
                 driver = new InternetExplorerDriver();
             }
             return driver;

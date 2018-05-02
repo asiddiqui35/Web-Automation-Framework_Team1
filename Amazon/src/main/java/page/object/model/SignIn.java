@@ -32,7 +32,7 @@ public class SignIn extends CommonAPI{
         account.click();
         inputEmail.sendKeys("nizizidiot@gmail.com");
         proceed.click();
-        password.sendKeys("xxxxxxxxx");
+        password.sendKeys("myamazon");
         submit.click();
         myAccount.click();
         myOrders.click();
