@@ -1,7 +1,6 @@
 package page.object.model;
 
 import base.CommonAPI;
-import com.sun.tools.javac.jvm.Items;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
