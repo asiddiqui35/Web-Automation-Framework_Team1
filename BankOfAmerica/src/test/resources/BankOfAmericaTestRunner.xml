@@ -12,7 +12,8 @@
     <parameter name = "url" value = "https://www.bankofamerica.com"/>
     <test name = "BOA home">
         <classes>
-            <class name="testHome.TestLogIn"/>
+            <class name="testHome.TestHome"/>
+            <!--<class name="testHome.TestLogIn"/>-->
         </classes>
     </test>
 </suite>

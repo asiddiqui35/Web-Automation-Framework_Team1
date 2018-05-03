@@ -32,6 +32,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 public class CommonAPI {
     public WebDriver driver = null;
     public String browserstack_username = "your user name";
@@ -116,24 +117,22 @@ public class CommonAPI {
         driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         driver.get(url);
         driver.manage().window().maximize();
-    }
-
-    public void setUp(@Optional("https://www.google.com/") String url) {
-        System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
-        driver.get(url);
-        driver.manage().window().maximize();
-    }
-
-    public WebDriver getLocalDriver(@Optional("mac") String OS, String browserName) {
-        if (browserName.equalsIgnoreCase("chrome")) {
-            if (OS.equalsIgnoreCase("OS X")) {
-                System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
-            } else if (OS.equalsIgnoreCase("Windows")) {
-                System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
-            }
+    } 
+        public void setUp (@Optional("https://www.google.com/") String url){
+            System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
+            driver = new ChromeDriver();
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+            driver.get(url);
+            driver.manage().window().maximize();
+        }
+        public WebDriver getLocalDriver (@Optional("mac") String OS, String browserName){
+            if (browserName.equalsIgnoreCase("chrome")) {
+                if (OS.equalsIgnoreCase("OS X")) {
+                    System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
+                } else if (OS.equalsIgnoreCase("Windows")) {
+                    System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver")
+           }
             driver = new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {
             if (OS.equalsIgnoreCase("OS X")) {

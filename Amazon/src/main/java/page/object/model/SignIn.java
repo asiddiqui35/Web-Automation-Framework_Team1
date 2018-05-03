@@ -4,7 +4,7 @@ import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SignIn {
+public class SignIn extends CommonAPI{
 
     @FindBy(xpath = "//*[@id=\"nav-link-accountList\"]/span[2]")
     WebElement account;
