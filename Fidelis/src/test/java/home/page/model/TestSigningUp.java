@@ -9,8 +9,7 @@ public class TestSigningUp extends SigningUp{
     public void beAmember()throws InterruptedException {
         SigningUp sUp = PageFactory.initElements(driver, SigningUp.class);
         sUp.registration();
-        sUp.loginPage();
-        sUp.email();
-
+//        sUp.Loggin();
+//        sUp.EmailInput();
         }
 }
