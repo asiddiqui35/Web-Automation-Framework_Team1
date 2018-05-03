@@ -9,7 +9,7 @@ public class Home extends CommonAPI {
         driver.findElement(By.xpath("/html/body/main/div[1]/div/div/header/div[1]/div/div[2]/div/div/div")).click();
     }
     public void putNames(){
-    driver.findElement(By.xpath("/html/body/main/div[1]/div/div/header/div[1]/div/div[2]/div[2]/div[1]/input")).sendKeys("Game of Thrones", Keys.ENTER);
+        driver.findElement(By.xpath("/html/body/main/div[1]/div/div/header/div[1]/div/div[2]/div[2]/div[1]/input")).sendKeys("Game of Thrones", Keys.ENTER);
     }
     public void chekHomeTabElements(){
         driver.findElement(By.xpath("/html/body/main/div[1]/div/div/header/div[1]/div/div[2]/div/div/div")).click();
