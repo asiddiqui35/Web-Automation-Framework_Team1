@@ -7,15 +7,15 @@ import home.page.model.HomePage;
 
 public class TestHomePage extends HomePage {
     @Test// test 1
-    public void search()throws InterruptedException{
-        HomePage pp =PageFactory.initElements(driver,HomePage.class);
-        pp.getSearchInput();
-        pp.getSearchBtn();
-        pp.clickPlan(driver);
-        pp.searchDoctors(driver);
-        pp.searchLocation(driver);
+    public void search() throws Exception {
+        HomePage homePage =PageFactory.initElements(driver,HomePage.class);
+        homePage.getSearchInput();
+        homePage.getSearchBtn();
+        homePage.clickPlan(driver);
+        homePage.searchDoctors(driver);
+        homePage.searchLocation(driver);
+        homePage.findNumLinkHomePage();
 
     }
-
 }
 
