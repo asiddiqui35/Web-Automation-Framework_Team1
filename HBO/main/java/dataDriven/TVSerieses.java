@@ -8,6 +8,8 @@ import org.openqa.selenium.support.How;
 import reporting.TestLogger;
 import utility.DataReader;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class TVSerieses extends CommonAPI {
 
@@ -25,7 +27,7 @@ public class TVSerieses extends CommonAPI {
 
     public void clickSearchIcon() {
         //TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        clickByXpath("//div[@class='bands/MainNavigation--searchIcon'][1]");
+       clickByXpath("/html/body/main/div[1]/div/div/header/div[1]/div/div[2]/div/div/div");
     }
     public void searchFor(String value) {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
@@ -36,7 +38,7 @@ public class TVSerieses extends CommonAPI {
         ReadFiles readFiles =new ReadFiles();
         String[] value = readFiles.getDataFromExcelFile();
         for (int i = 1; i < value.length; i++) {
-            searchFor(value[i]);
+           searchFor(value[i]);
         }
     }
 }

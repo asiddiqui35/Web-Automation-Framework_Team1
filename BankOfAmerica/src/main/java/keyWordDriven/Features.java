@@ -11,13 +11,10 @@ import java.io.IOException;
 import java.io.InvalidClassException;
 
 public class Features extends CommonAPI {
-    LogIn logIn = new LogIn();
-    HomePage homePage = new HomePage();
-    Search searchBox = new Search();
-
     public void languageAndLocation() {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
+        HomePage homePage = new HomePage();
         homePage.checkHomePage();
         homePage.checkLanguage();
         homePage.locationDropdown();
@@ -26,6 +23,7 @@ public class Features extends CommonAPI {
     public void signIn() {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
+        LogIn logIn = new LogIn();
         logIn.enterUserName();
         logIn.enterPassword();
         logIn.clickSignIn();
@@ -34,6 +32,7 @@ public class Features extends CommonAPI {
     public void search() throws InterruptedException, IOException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
+        Search searchBox = new Search();
         searchBox.searchInSearchBox();
     }
 
@@ -54,8 +53,8 @@ public class Features extends CommonAPI {
         }
     }
     public void selectFeatures(WebDriver driver1) throws IOException, InterruptedException {
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
-        }.getClass().getEnclosingMethod().getName()));
+//        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+//        }.getClass().getEnclosingMethod().getName()));
         ExcelFile excelReader = new ExcelFile();
         String[] testSteps = excelReader.getDataFromExcelFileForFeaturesChoice();
         for (int i = 1; i < testSteps.length; i++) {

@@ -15,6 +15,5 @@ public class TVSeriesesTest extends TVSerieses{
         TVSerieses obj = PageFactory.initElements(driver,TVSerieses.class);
         clickSearchIcon();
         obj.searchTVShowsEnter();
-        clickSearchIcon();
     }
 }
