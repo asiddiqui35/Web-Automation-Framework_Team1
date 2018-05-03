@@ -11,8 +11,10 @@ public class TVSeriesesTest extends TVSerieses{
 
     @Test
     public void searchTVSerieses() throws IOException {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         TVSerieses obj = PageFactory.initElements(driver,TVSerieses.class);
         clickSearchIcon();
         obj.searchTVShowsEnter();
+        clickSearchIcon();
     }
 }

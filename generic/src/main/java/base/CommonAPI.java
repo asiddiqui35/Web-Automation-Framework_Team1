@@ -1,4 +1,5 @@
 package base;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.exec.OS;
@@ -19,6 +20,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -117,22 +119,24 @@ public class CommonAPI {
         driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         driver.get(url);
         driver.manage().window().maximize();
-    } 
-        public void setUp (@Optional("https://www.google.com/") String url){
-            System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
-            driver = new ChromeDriver();
-            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
-            driver.get(url);
-            driver.manage().window().maximize();
-        }
-        public WebDriver getLocalDriver (@Optional("mac") String OS, String browserName){
-            if (browserName.equalsIgnoreCase("chrome")) {
-                if (OS.equalsIgnoreCase("OS X")) {
-                    System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
-                } else if (OS.equalsIgnoreCase("Windows")) {
-                    System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver")
-           }
+    }
+
+    public void setUp(@Optional("https://www.google.com/") String url) {
+        System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+        driver.get(url);
+        driver.manage().window().maximize();
+    }
+
+    public WebDriver getLocalDriver(@Optional("mac") String OS, String browserName) {
+        if (browserName.equalsIgnoreCase("chrome")) {
+            if (OS.equalsIgnoreCase("OS X")) {
+                System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
+            } else if (OS.equalsIgnoreCase("Windows")) {
+                System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
+            }
             driver = new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {
             if (OS.equalsIgnoreCase("OS X")) {
@@ -429,7 +433,6 @@ public class CommonAPI {
         boolean value = driver1.findElement(By.cssSelector(locator)).isDisplayed();
         return value;
     }
-
 }
 
 
