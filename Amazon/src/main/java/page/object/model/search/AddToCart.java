@@ -4,7 +4,7 @@ import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SearchItem extends CommonAPI{
+public class AddToCart extends CommonAPI{
 
     @FindBy(xpath = "//*[@id=\"twotabsearchtextbox\"]")
     WebElement searchItem;
