@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 
 public class TestSigningUp extends SigningUp{
     @Test
-    public void beAmember()throws InterruptedException {
+    public void linkpagee ()throws InterruptedException {
         SigningUp sUp = PageFactory.initElements(driver, SigningUp.class);
-        sUp.registration();
+        sUp.linktextpage(driver);
 //        sUp.Loggin();
 //        sUp.EmailInput();
         }

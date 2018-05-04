@@ -432,6 +432,7 @@ public class CommonAPI {
         boolean value = driver1.findElement(By.cssSelector(locator)).isDisplayed();
         return value;
     }
+
 }
 
 
