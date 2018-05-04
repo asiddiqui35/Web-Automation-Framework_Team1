@@ -5,12 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SearchFriends extends CommonAPI {
-    @FindBy(id="js_ua")
+    @FindBy(id="/html/body/div[1]/div[2]/div/div[1]/div/div/div/div[1]/div[2]/div/form/div/div/div/div/input[2]")
 
     public WebElement search;
 
@@ -38,5 +39,12 @@ public class SearchFriends extends CommonAPI {
         itemsList.add("Rishi");
 
         return itemsList;
+    }
+    public void logIn() throws InterruptedException {
+        LoginPage lg = PageFactory.initElements(driver,LoginPage.class);
+        lg.email();
+        lg.passWord();
+        lg.clickingLogin();
+        sleepFor(3);
     }
 }

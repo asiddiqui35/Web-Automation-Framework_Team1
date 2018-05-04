@@ -104,9 +104,9 @@ public class DropDownMenu extends CommonAPI{
         watchList.click();
         enterEmail.sendKeys("nizizidiot@gmail.com");
         clickContinue.click();
-        inputPassword.sendKeys("myamazon");
+        inputPassword.sendKeys("xxxxxxxxx");
         submit.click();
-        
+
         clickPrimeMusic.click();
         selectGames.click();
         meetAlexa.click();

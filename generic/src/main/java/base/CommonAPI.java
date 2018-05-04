@@ -1,4 +1,5 @@
 package base;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.exec.OS;
@@ -19,6 +20,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -86,6 +88,7 @@ public class CommonAPI {
         }
         driver.quit();
     }
+
     @AfterSuite
     public void generateReport() {
         extent.close();
@@ -118,43 +121,45 @@ public class CommonAPI {
         driver.manage().window().maximize();
     }
 
-        public void setUp (@Optional("https://www.google.com/") String url){
-            System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
-            driver = new ChromeDriver();
-            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
-            driver.get(url);
-            driver.manage().window().maximize();
-        }
-        public WebDriver getLocalDriver (@Optional("mac") String OS, String browserName){
-            if (browserName.equalsIgnoreCase("chrome")) {
-                if (OS.equalsIgnoreCase("OS X")) {
-                    System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
-                } else if (OS.equalsIgnoreCase("Windows")) {
-                    System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
-                }
-                driver = new ChromeDriver();
-            } else if (browserName.equalsIgnoreCase("firefox")) {
-                if (OS.equalsIgnoreCase("OS X")) {
+    public void setUp(@Optional("https://www.google.com/") String url) {
+        System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+        driver.get(url);
+        driver.manage().window().maximize();
+    }
 
-                    System.setProperty("webdriver.gecko.driver", "../generic/browser-driver/geckodriver");
-
-                    System.setProperty("webdriver.gecko.driver", "../Generic/driver/geckodriver");
-
-                } else if (OS.equalsIgnoreCase("Windows")) {
-                    System.setProperty("webdriver.gecko.driver", "../generic/browser-driver/geckodriver.exe");
-                }
-                driver = new FirefoxDriver();
-
-            } else if (browserName.equalsIgnoreCase("ie")) {
-                System.setProperty("webdriver.ie.driver", "../generic/browser-driver/IEDriverServer.exe");
-                driver = new InternetExplorerDriver();
+    public WebDriver getLocalDriver(@Optional("mac") String OS, String browserName) {
+        if (browserName.equalsIgnoreCase("chrome")) {
+            if (OS.equalsIgnoreCase("OS X")) {
+                System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
+            } else if (OS.equalsIgnoreCase("Windows")) {
+                System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
             }
+            driver = new ChromeDriver();
+        } else if (browserName.equalsIgnoreCase("firefox")) {
+            if (OS.equalsIgnoreCase("OS X")) {
+
+                System.setProperty("webdriver.gecko.driver", "../generic/browser-driver/geckodriver");
+
+                System.setProperty("webdriver.gecko.driver", "../generic/driver/geckodriver");
+
+            } else if (OS.equalsIgnoreCase("Windows")) {
+                System.setProperty("webdriver.gecko.driver", "../generic/browser-driver/geckodriver.exe");
+            }
+            driver = new FirefoxDriver();
+
+        } else if (browserName.equalsIgnoreCase("ie")) {
+            System.setProperty("webdriver.ie.driver", "../generic/browser-driver/IEDriverServer.exe");
+            driver = new InternetExplorerDriver();
+
             return driver;
         }
+
         public WebDriver getCloudDriver (String envName, String envUsername, String envAccessKey, String os, String
         os_version, String browserName,
-                String browserVersion)throws IOException {
+                String browserVersion) throws IOException {
             DesiredCapabilities cap = new DesiredCapabilities();
             cap.setCapability("browser", browserName);
             cap.setCapability("browser_version", browserVersion);
@@ -171,10 +176,12 @@ public class CommonAPI {
             }
             return driver;
         }
+
         @AfterMethod
         public void afterMethod () {
             driver.quit();
         }
+
         public void clickOnCss (String locator){
             driver.findElement(By.cssSelector(locator)).click();
         }
@@ -305,7 +312,6 @@ public class CommonAPI {
         public void sleepFor ( int sec) throws InterruptedException {
             Thread.sleep(sec * 1000);
         }
-
         public void mouseHoverByCSS (String locator){
             try {
                 WebElement element = driver.findElement(By.cssSelector(locator));
@@ -401,7 +407,7 @@ public class CommonAPI {
          */
         }
 
-        public void clearInput(){
+        public void clearInput (String locator){
 
             driver.findElement(By.cssSelector(locator)).clear();
         }
@@ -425,11 +431,14 @@ public class CommonAPI {
             driver1.switchTo().window(newTabs.get(0));
             return driver1;
         }
+
         public static boolean isPopUpWindowDisplayed (WebDriver driver1, String locator){
             boolean value = driver1.findElement(By.cssSelector(locator)).isDisplayed();
             return value;
         }
     }
+
+}
 
 
 
