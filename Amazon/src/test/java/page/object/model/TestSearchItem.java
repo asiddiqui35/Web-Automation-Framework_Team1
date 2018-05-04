@@ -1,17 +1,24 @@
 package page.object.model;
 
-import base.CommonAPI;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.Test;
-import page.object.model.search.SearchItem;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import page.object.model.search.SearchItems;
+import reporting.TestLogger;
 
-public class TestSearchItem extends SearchItem {
+import java.io.IOException;
 
-    @Test
-    public void testSearchItem() throws InterruptedException {
+public class TestSearchItem extends SearchItems {
 
-        SearchItem searchitem = PageFactory.initElements(driver, SearchItem.class);
-        System.out.println(driver.getTitle()+" " + driver.getCurrentUrl());
-        searchitem.search();
+    public void searchItemsAndSubmitButton() throws IOException {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        SearchItems itemsToBeSearched = new SearchItems();
+        String[] value = itemsToBeSearched.getDataFromExcelFile();
+        for (int i = 0; i < value.length; i++) {
+            searchfor(value[i]);
+            submitSearchButton();
+            clearInput();
+        }
     }
 }

@@ -11,6 +11,7 @@ import java.util.List;
 
 public class SearchFriends extends CommonAPI {
     @FindBy(id="js_ua")
+
     public WebElement search;
 
     public WebElement getSearchInputField() {

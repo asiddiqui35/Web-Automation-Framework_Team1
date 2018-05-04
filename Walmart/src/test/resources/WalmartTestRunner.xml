@@ -7,14 +7,13 @@
     <!--<parameter name = "userName" value = "rahmanww"/>-->
     <!--<parameter name = "key" value = "6f132866-de72-43fd-b49a-e6f81d26bfe3"/>-->
     <!--<parameter name = "os" value = "WIN8"/>-->
-    <!--<parameter name = "browserName" value = "firefox"/>-->
+    <parameter name = "browserName" value = "chrome"/>
     <!--<parameter name = "browserVersion" value = "41"/>-->
     <parameter name = "url" value = "https://www.walmart.com"/>
 
-
     <test name = "walmart home">
         <classes>
-            <class name="page.object.model.TestWalmartPickUp"/>
+            <class name="page.object.model.TestHome"/>
         </classes>
     </test>
 
