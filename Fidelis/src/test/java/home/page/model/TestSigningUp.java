@@ -6,10 +6,11 @@ import org.testng.annotations.Test;
 
 public class TestSigningUp extends SigningUp{
     @Test
-    public void beAmember()throws InterruptedException {
+    public void memberPage ()throws InterruptedException {
         SigningUp sUp = PageFactory.initElements(driver, SigningUp.class);
-        sUp.registration();
-//        sUp.Loggin();
-//        sUp.EmailInput();
+//        sUp.members();
+//        sUp.LogiN();
+        sUp.loginnnnn();
+
         }
 }

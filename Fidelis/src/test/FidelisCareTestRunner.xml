@@ -14,10 +14,10 @@
 
     <test name = "Fidelis Care">
         <classes>
-            <class name="home.page.model.TestHomePage"/>
+            <!--<class name="home.page.model.TestHomePage"/>-->
             <!--<class name="home.page.model.TestEvents"/>-->
             <!--<class name="home.page.model.TestSigningUp"/>-->
-            <!--<class name="home.page.model.TestLinkPage"/>-->
+            <class name="home.page.model.TestLinkPage"/>
         </classes>
     </test>
 

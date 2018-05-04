@@ -9,6 +9,9 @@ public class TestLinkPage extends LinkPage{
     @Test
     public void LinkPagee()throws InterruptedException {
         LinkPage linkpage = PageFactory.initElements(driver, LinkPage.class);
+        linkpage.getProducts().click();
+        linkpage.getFindADoctor().click();
+
     }
 
 }
