@@ -22,9 +22,11 @@ public class HomePage extends CommonAPI {
     public WebElement getSearchInput() {
         return SearchInput;
     }
+
     public void setSearchInput(WebElement searchInput) {
         this.SearchInput = searchInput;
     }
+
     public WebElement getSearchBtn() {
         return searchBtn;
     }
@@ -44,22 +46,18 @@ public class HomePage extends CommonAPI {
         getSearchBtn().click();
         Thread.sleep(2000);
         driver.navigate().back();
-        Thread.sleep(2000);
     }
     public void searchDoctors(WebDriver driver) throws InterruptedException {
         getSearchBtn().click();
         getSearchInput().clear();
         getSearchInput().sendKeys("Doctors", Keys.ENTER);
         Thread.sleep(2000);
-        driver.navigate().back();
     }
     public void searchLocation(WebDriver driver) throws InterruptedException {
-        Thread.sleep(2000);
         getSearchBtn().click();
         getSearchInput().clear();
         getSearchInput().sendKeys("Locations", Keys.ENTER);
         Thread.sleep(2000);
-        driver.navigate().back();
     }
     public void findNumLinkHomePage() throws Exception{
         List<WebElement> link = getList();

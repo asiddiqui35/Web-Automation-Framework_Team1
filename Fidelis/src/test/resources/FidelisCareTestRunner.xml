@@ -4,7 +4,7 @@
 <suite name="Fidelis Automation Script " parallel="false" >
 
     <!--<parameter name = "useSauceLabs" value = "false"/>-->
-    <!--<parameter name = "userName" value = "rahmanww"/>-->
+    <!--<parameter name = "userName" value = "maya813r"/>-->
     <!--<parameter name = "key" value = "6f132866-de72-43fd-b49a-e6f81d26bfe3"/>-->
     <!--<parameter name = "os" value = "WIN8"/>-->
     <parameter name = "browserName" value = "chrome"/>
@@ -17,7 +17,9 @@
             <!--<class name="home.page.model.TestHomePage"/>-->
             <!--<class name="home.page.model.TestEvents"/>-->
             <!--<class name="home.page.model.TestSigningUp"/>-->
-            <class name="home.page.model.TestLinkPage"/>
+            <!--<class name="home.page.model.TestLinkPage"/>-->
+            <!--<class name="home.page.model.signintest"/>-->
+            <class name ="TestdataDriven.TestJDBC"/>
         </classes>
     </test>
 

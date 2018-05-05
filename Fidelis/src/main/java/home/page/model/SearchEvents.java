@@ -21,7 +21,6 @@ public class SearchEvents extends CommonAPI{
             eventGoBtn.click();
             distance.sendKeys("5");
             submitBtn.click();
-
         }
 }
 

@@ -1,15 +1,15 @@
-package home.page.model;
+package TestdataDriven;
 
-import base.CommonAPI;
+import dataDriven.JDBC;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import reporting.TestLogger;
 
-public class TestSigningUp extends SigningUp{
+public class TestJDBC extends JDBC {
     @Test
-    public void memberPage ()throws InterruptedException {
+    public void checkConnection() throws Exception{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        SigningUp signingup = PageFactory.initElements(driver, SigningUp.class);
-        signingup.clickOnLogin();
+        JDBC jdbc = PageFactory.initElements(driver, JDBC.class);
+     jdbc.readingfromsqlNsearching();
     }
 }
