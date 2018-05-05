@@ -35,7 +35,7 @@ public class CreditCards extends CommonAPI{
         selectCreditCards();
         smallBusinessCards.click();
     }
-    public void seleManageCreditCardAccount(){
+    public void selectManageCreditCardAccount(){
         selectCreditCards();
         manageCreditCardAccount.click();
     }
