@@ -12,5 +12,16 @@ public class Investing extends CommonAPI {
     @FindBy(id = "investmentProducts")public WebElement investmentProducts;
     @FindBy(id = "usTrustWealthManagement")public WebElement usTrustWealthManagement;
     @FindBy(id="merrillWealthManagement")public WebElement merrilWealthManagement;
+    public void selectInvesting(){
+        investing.click();
+    }
+    public void selectRetimentPlanning(){
+        selectInvesting();
+        retirementPlanning.click();
+    }
+    public void selectRollovers(){
+        selectInvesting();
+        rollovers.click();
+    }
 }
 
