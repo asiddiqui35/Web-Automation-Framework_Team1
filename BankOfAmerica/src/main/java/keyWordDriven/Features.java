@@ -5,8 +5,8 @@ import home.HomePage;
 import home.LogIn;
 import home.Search;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import reporting.TestLogger;
-
 import java.io.IOException;
 import java.io.InvalidClassException;
 
@@ -15,24 +15,26 @@ public class Features extends CommonAPI {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
         HomePage homePage = new HomePage();
-        homePage.checkHomePage();
         homePage.checkLanguage();
+        driver.navigate().refresh();
         homePage.locationDropdown();
+        driver.navigate().refresh();
     }
 
     public void signIn() {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
-        LogIn logIn = new LogIn();
+        LogIn logIn = PageFactory.initElements(driver,LogIn.class);
         logIn.enterUserName();
         logIn.enterPassword();
         logIn.clickSignIn();
+        goBackToHomeWindow();
     }
 
     public void search() throws InterruptedException, IOException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
-        Search searchBox = new Search();
+        Search searchBox = PageFactory.initElements(driver,Search.class);
         searchBox.searchInSearchBox();
     }
 
@@ -47,7 +49,8 @@ public class Features extends CommonAPI {
                 search();
                 break;
             case "signIn":
-                signIn();
+               // signIn();
+                break;
             default:
                 throw new InvalidClassException("Not a Feature in this this list");
         }
@@ -57,7 +60,7 @@ public class Features extends CommonAPI {
 //        }.getClass().getEnclosingMethod().getName()));
         ExcelFile excelReader = new ExcelFile();
         String[] testSteps = excelReader.getDataFromExcelFileForFeaturesChoice();
-        for (int i = 1; i < testSteps.length; i++) {
+        for (int i = 0; i < testSteps.length; i++) {
             select(testSteps[i], driver1);
         }
     }
