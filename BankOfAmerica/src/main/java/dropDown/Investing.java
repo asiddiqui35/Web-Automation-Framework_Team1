@@ -23,5 +23,21 @@ public class Investing extends CommonAPI {
         selectInvesting();
         rollovers.click();
     }
+    public void selectCollegeSavingsPlans(){
+        selectInvesting();
+        collgeSavingsPlans.click();
+    }
+    public void selectInvestmentProducts(){
+        selectInvesting();
+        investmentProducts.click();
+    }
+    public void selectUsTrustWealthManagement(){
+        selectInvesting();
+        usTrustWealthManagement.click();
+    }
+    public void selectMerrilWealthManagement(){
+      selectInvesting();
+      merrilWealthManagement.click();
+    }
 }
 

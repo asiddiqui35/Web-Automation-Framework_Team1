@@ -37,8 +37,8 @@ import java.util.concurrent.TimeUnit;
 
 public class CommonAPI {
     public WebDriver driver = null;
-    public String browserstack_username = "your user name";
-    public String browserstack_accesskey = "your access key";
+    public String browserstack_username = "aftabsiddiqui1";
+    public String browserstack_accesskey = "QWDyBkL5Cj6uqJzYZw4c";
     public String saucelabs_username = "";
     public String saucelabs_accesskey = "";
     //ExtentReport
@@ -104,8 +104,8 @@ public class CommonAPI {
     @BeforeMethod
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("false") String cloudEnvName,
                       @Optional("OS X") String os, @Optional("10") String os_version, @Optional("chrome") String browserName, @Optional("34")
-                              String browserVersion, @Optional("http://www.walmart.com") String url) throws IOException {
-        System.setProperty("webdriver.chrome.driver", "/Users/peoplentech/eclipse-workspace-March2018/SeleniumProject1/driver/chromedriver");
+                              String browserVersion, @Optional("http://www.bankofamerica.com") String url) throws IOException {
+        System.setProperty("webdriver.chrome.driver", "/Users/aftabsiddiqui/IdeaProjects/WebAutomation1/generic/driver/chromedriver");
         if (useCloudEnv == true) {
             if (cloudEnvName.equalsIgnoreCase("browserstack")) {
                 getCloudDriver(cloudEnvName, browserstack_username, browserstack_accesskey, os, os_version, browserName, browserVersion);
@@ -146,17 +146,16 @@ public class CommonAPI {
                 System.setProperty("webdriver.gecko.driver", "../generic/driver/geckodriver");
 
             } else if (OS.equalsIgnoreCase("Windows")) {
-                System.setProperty("webdriver.gecko.driver", "../generic/browser-driver/geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", "../generic/browser-driver/geckodriver");
             }
             driver = new FirefoxDriver();
 
         } else if (browserName.equalsIgnoreCase("ie")) {
-            System.setProperty("webdriver.ie.driver", "../generic/browser-driver/IEDriverServer.exe");
+            System.setProperty("webdriver.ie.driver", "../generic/browser-driver/IEDriverServer");
             driver = new InternetExplorerDriver();
-
-            return driver;
         }
-
+        return driver;
+    }
         public WebDriver getCloudDriver (String envName, String envUsername, String envAccessKey, String os, String
         os_version, String browserName,
                 String browserVersion) throws IOException {
@@ -248,7 +247,6 @@ public class CommonAPI {
                 String st = web.getText();
                 text.add(st);
             }
-
             return text;
         }
 
@@ -438,7 +436,7 @@ public class CommonAPI {
         }
     }
 
-}
+
 
 
 

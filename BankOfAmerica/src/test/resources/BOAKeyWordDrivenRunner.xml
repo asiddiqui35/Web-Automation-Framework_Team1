@@ -12,8 +12,8 @@
     <parameter name = "url" value = "https://www.bankofamerica.com"/>
     <test name = "BOA home">
         <classes>
-            <!--<class name="testKeyWordDrive.TestKeyWord"/>-->
-            <class name="testDataDriven.TestJDBC"/>
+            <class name="testKeyWordDrive.TestKeyWord"/>
+            <!--<class name="testDataDriven.TestServicesFromDB"/>-->
 
         </classes>
     </test>

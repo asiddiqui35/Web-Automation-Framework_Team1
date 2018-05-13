@@ -29,14 +29,11 @@ public class SearchItemsExcel extends CommonAPI {
         }
         return list;
     }
-
     public void testExcel() throws IOException {
         ArrayList<String> searchAbleItems = dataFromExcel("/Users/selinatanha/Web-Automation-Framework_Team1/Walmart/Data/file1.xls","Sheet1",1);
         for (int i = 0; i < searchAbleItems.size(); i++) {
-
             typeByXpath("//*[@id=\"global-search-form\"]/div/div[3]/div/button/span[2]", searchAbleItems.get(i));
             clearInputField("//*[@id=\"global-search-input\"]");
-
         }//*[@id="global-search-form"]/div/div[3]/div/button/span[2]
     }
 }

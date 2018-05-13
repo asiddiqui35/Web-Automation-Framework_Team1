@@ -19,7 +19,7 @@ public class ConnectDB {
 
     public Properties loadProperties() throws IOException{
         Properties prop = new Properties();
-        InputStream ism = new FileInputStream("/Users/peoplentech/develop/automation/Web-Automation-Framework/Generic/databaseinfo/secret.properties");
+        InputStream ism = new FileInputStream("/Users/aftabsiddiqui/IdeaProjects/WebAutomation1/BankOfAmerica/jdbcProperties/secret.property");
         prop.load(ism);
         ism.close();
         return prop;

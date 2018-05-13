@@ -14,11 +14,10 @@ public class Features extends CommonAPI {
     public void languageAndLocation() {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
-        HomePage homePage = new HomePage();
+        HomePage homePage =PageFactory.initElements(driver,HomePage.class);
         homePage.checkLanguage();
-        driver.navigate().refresh();
+        driver.navigate().back();
         homePage.locationDropdown();
-        driver.navigate().refresh();
     }
 
     public void signIn() {
