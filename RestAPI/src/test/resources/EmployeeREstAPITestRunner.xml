@@ -1,0 +1,21 @@
+<!--<?xml version = "1.0" encoding = "UTF-8"?>-->
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+
+<suite name="WalMart Automation Script " parallel="false" >
+
+    <!--&lt;!&ndash;<parameter name = "useSauceLabs" value = "false"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<parameter name = "userName" value = "rahmanww"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<parameter name = "key" value = "6f132866-de72-43fd-b49a-e6f81d26bfe3"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<parameter name = "os" value = "WIN8"/>&ndash;&gt;-->
+    <!--<parameter name = "browserName" value = "chrome"/>-->
+    <!--&lt;!&ndash;<parameter name = "browserVersion" value = "41"/>&ndash;&gt;-->
+    <!--<parameter name = "url" value = "https://www.walmart.com"/>-->
+
+    <!--<test name = "walmart home">-->
+        <!--<classes>-->
+            <!--&lt;!&ndash;<class name="page.object.model.TestHome"/>&ndash;&gt;-->
+            <!--<class name="TestKeyWord.TestJDBC"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+</suite>
