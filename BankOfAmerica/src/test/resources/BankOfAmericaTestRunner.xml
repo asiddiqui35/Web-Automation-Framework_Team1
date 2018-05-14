@@ -3,19 +3,21 @@
 
 <suite name="BOA Automation Script " parallel="false" >
 
-    <!--<parameter name = "useSauceLabs" value = "false"/>-->
-    <!--<parameter name = "userName" value = "rahmanww"/>-->
-    <!--<parameter name = "key" value = "6f132866-de72-43fd-b49a-e6f81d26bfe3"/>-->
-    <!--<parameter name = "os" value = "WIN8"/>-->
-    <parameter name = "browserName" value = "chrome"/>
-    <!--<parameter name = "browserVersion" value = "41"/>-->
-    <parameter name = "url" value = "https://www.bankofamerica.com"/>
+    <!--<parameter name="useCloudEnv" value="true"/>-->
+    <!--<parameter name="cloudEnvName" value="browserstack"/>-->
+    <!--<parameter name="os" value="OS X"/>-->
+    <!--<parameter name="os_version" value="Sierra"/>-->
+    <!--<parameter name="browserName" value="chrome"/>-->
+    <!--<parameter name="browserVersion" value="36.0"/>-->
+    <parameter name = "url" value = "https://www.bankofamerica.com/home"/>
     <test name = "BOA home">
         <classes>
             <!--<class name="testHome.TestDropDown"/>-->
             <!--<class name="testHome.TestHome"/>-->
             <!--<class name="testHome.TestLogIn"/>-->
-            <class name="testHome.SearchTest"/>
+            <!--<class name="testHome.SearchTest"/>-->
+            <!--<class name="testDropDown.TestDropDown"/>-->
+            <class name="testDataDriven.TestServices"/>
         </classes>
     </test>
 </suite>

@@ -45,6 +45,5 @@ public class SearchFriends extends CommonAPI {
         lg.email();
         lg.passWord();
         lg.clickingLogin();
-        sleepFor(3);
     }
 }

@@ -4,7 +4,7 @@ import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SearchItem extends CommonAPI{
+public class AddToCart extends CommonAPI{
 
     @FindBy(xpath = "//*[@id=\"twotabsearchtextbox\"]")
     WebElement searchItem;
@@ -28,7 +28,6 @@ public class SearchItem extends CommonAPI{
     WebElement clickConinue;
 
     public void search() {
-
         searchItem.sendKeys("ipad air 2 case");
         click.click();
         chooseItem.click();
