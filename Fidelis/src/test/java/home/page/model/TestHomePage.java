@@ -18,8 +18,6 @@ public class TestHomePage extends HomePage {
         homePage.searchDoctors(driver);
         homePage.searchLocation(driver);
         homePage.findNumLinkHomePage();
-
-
-    }
+        }
 }
 
