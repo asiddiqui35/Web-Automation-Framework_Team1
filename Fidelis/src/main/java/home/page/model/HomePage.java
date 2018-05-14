@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import reporting.TestLogger;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -39,6 +40,13 @@ public class HomePage extends CommonAPI {
 
     public void setList(List<WebElement> list) { this.list = list; }
 
+
+    public void checkLanguage()throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        clickOnCss("#dnn_dnnLANGUAGE_lblLanguage");
+    }
+
     public void clickPlan(WebDriver driver) throws InterruptedException {
         getSearchBtn().click();
         getSearchInput().clear();
@@ -59,10 +67,11 @@ public class HomePage extends CommonAPI {
         getSearchInput().sendKeys("Locations", Keys.ENTER);
         Thread.sleep(2000);
     }
-    public void findNumLinkHomePage() throws Exception{
+    public void findNumLinkHomePage() throws Exception {
         List<WebElement> link = getList();
-        for (WebElement aa: link){
+        for (WebElement aa : link) {
             System.out.println(aa.getAttribute("href"));
+
         }
 
     }
