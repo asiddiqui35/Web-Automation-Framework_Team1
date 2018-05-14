@@ -434,6 +434,19 @@ public class CommonAPI {
             boolean value = driver1.findElement(By.cssSelector(locator)).isDisplayed();
             return value;
         }
+        //extra 3methods added for google api
+        public void typeByIdNEnter(String locator, String value) {
+            driver.findElement(By.id(locator)).sendKeys(value, Keys.ENTER);
+        }
+
+    public String getCurrentPageTitle(){
+        String title = driver.getTitle();
+        return title;
+    }
+
+    public void clearInputFieldById(String locator){
+        driver.findElement(By.id(locator)).clear();
+    }
     }
 
 
