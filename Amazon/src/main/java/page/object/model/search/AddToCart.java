@@ -35,7 +35,5 @@ public class AddToCart extends CommonAPI{
         checkOut.click();
         inPutEmail.sendKeys("nizizidiot@gmail.com");
         clickConinue.click();
-
     }
-
 }

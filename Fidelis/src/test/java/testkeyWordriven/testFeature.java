@@ -1,23 +1,10 @@
 package testkeyWordriven;
 
-import com.sun.xml.internal.fastinfoset.sax.Features;
-import keyWordDriven.ExcelFile;
-
+import keyWordDriven.Feature;
 import org.testng.annotations.Test;
-import reporting.TestLogger;
 
-import java.io.IOException;
-
-public class testFeature extends Features {
+public class testFeature extends Feature {
     @Test
     public void testKeyWord()throws Exception {
-
-
-
-
-
-
-
-
     }
 }

@@ -14,7 +14,11 @@
 
     <test name = "Amazon">
         <classes>
+
+           <class name="page.object.model.TestJDBC"/>
+
            <class name="page.object.model.TestAddToCart"/>
+
         </classes>
     </test>
 

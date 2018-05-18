@@ -26,15 +26,12 @@ public class SearchPage {
             getSearchInputField().clear();
         }
     }
-
     public List<String> getItemValue() {
         List<String> itemsList = new ArrayList<String>();
         itemsList.add("Harry Potter");
         itemsList.add("Coffee Mug");
         itemsList.add("Laptop");
         itemsList.add("Baby Wipes");
-
         return itemsList;
     }
-
 }

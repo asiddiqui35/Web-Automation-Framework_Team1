@@ -1,4 +1,4 @@
-package TestKeyWord;
+package TestDataDriven;
 
 import datadriven.JDBC;
 import org.testng.annotations.Test;
