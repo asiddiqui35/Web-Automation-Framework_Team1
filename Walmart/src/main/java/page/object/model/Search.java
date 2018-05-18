@@ -1,7 +1,6 @@
 package page.object.model;
 
 import base.CommonAPI;
-
 public class Search extends CommonAPI{
 public void searchTV(){ typeOnCss(".header-GlobalSearch-Input", "Sony tv");}
 public void searchToys(){ typeOnCss(".header-GlobalSearch-Input", "Toys");}

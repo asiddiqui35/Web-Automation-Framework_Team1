@@ -9,6 +9,7 @@ public class TestSearchFriends extends SearchFriends {
     public void searchFriends() throws InterruptedException {
         SearchFriends sc = PageFactory.initElements(driver,SearchFriends.class);
         logIn();
+        driver.navigate().refresh();
         sc.searchforpeople();
     }
 }
