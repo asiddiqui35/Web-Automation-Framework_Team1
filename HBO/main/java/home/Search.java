@@ -11,9 +11,9 @@ import java.util.List;
 
 public class Search extends CommonAPI{
 
-    @FindBy(xpath="//div[@class='bands/MainNavigation--searchIcon'][1]")
+    @FindBy(xpath = "//div/input[@class='components/Search--searchInput']")
     public WebElement searchInputField;
-    @FindBy(xpath="//input[@placeholder='Search'and@class='components/Search--searchInput']")
+    @FindBy(xpath="//div[@class='bands/MainNavigation--searchIcon'][1]")
     public WebElement searchName;
 
     public WebElement getSearchName() {

@@ -13,7 +13,8 @@
 
     <test name = "walmart home">
         <classes>
-            <class name="page.object.model.TestHome"/>
+            <!--<class name="page.object.model.TestHome"/>-->
+            <class name="TestKeyWord.TestJDBC"/>
         </classes>
     </test>
 

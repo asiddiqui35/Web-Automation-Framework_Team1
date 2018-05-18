@@ -28,7 +28,6 @@ public class AddToCart extends CommonAPI{
     WebElement clickConinue;
 
     public void search() {
-
         searchItem.sendKeys("ipad air 2 case");
         click.click();
         chooseItem.click();
@@ -36,7 +35,5 @@ public class AddToCart extends CommonAPI{
         checkOut.click();
         inPutEmail.sendKeys("nizizidiot@gmail.com");
         clickConinue.click();
-
     }
-
 }

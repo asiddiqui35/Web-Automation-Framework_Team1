@@ -96,7 +96,6 @@ public class DropDownMenu extends CommonAPI{
     WebElement beauty;
 
     public void d() throws InterruptedException {
-
         openDepartment.click();
         selectAllVideos.click();
         selectSeeMoreMovies.click();
@@ -106,7 +105,6 @@ public class DropDownMenu extends CommonAPI{
         clickContinue.click();
         inputPassword.sendKeys("xxxxxxxxx");
         submit.click();
-
         clickPrimeMusic.click();
         selectGames.click();
         meetAlexa.click();
