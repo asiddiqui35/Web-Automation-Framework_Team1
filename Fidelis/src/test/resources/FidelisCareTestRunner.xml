@@ -20,7 +20,8 @@
             <!--<class name="home.page.model.TestLinkPage"/>-->
             <!--<class name="home.page.model.signintest"/>-->
             <!--<class name ="TestdataDriven.TestJDBC"/>-->
-            <class name="testkeyWordriven."
+            <!--<class name="testkeyWordriven.testFeature"/>-->
+            <class name="googleSheet.TestGoogleSheet"/>
         </classes>
     </test>
 
