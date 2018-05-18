@@ -153,9 +153,10 @@ public class CommonAPI {
         } else if (browserName.equalsIgnoreCase("ie")) {
             System.setProperty("webdriver.ie.driver", "../generic/browser-driver/IEDriverServer.exe");
             driver = new InternetExplorerDriver();
-
-            return driver;
         }
+            return driver;
+
+    }
 
         public WebDriver getCloudDriver (String envName, String envUsername, String envAccessKey, String os, String
         os_version, String browserName,
@@ -438,7 +439,7 @@ public class CommonAPI {
         }
     }
 
-}
+
 
 
 
