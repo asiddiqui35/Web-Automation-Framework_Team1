@@ -19,7 +19,7 @@ public class DataReader {
     FileOutputStream fio = null;
     int numberOfRows, numberOfCol, rowNum;
 
-    public String[][] fileReader1(String path,int sheetIndex) throws IOException {
+    public String[][] fileReader1(String path, int sheetIndex) throws IOException {
         String[][] data = {};
         File file = new File(path);
         FileInputStream fis = new FileInputStream(file);

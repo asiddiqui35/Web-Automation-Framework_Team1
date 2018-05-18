@@ -153,6 +153,11 @@ public class CommonAPI {
         } else if (browserName.equalsIgnoreCase("ie")) {
             System.setProperty("webdriver.ie.driver", "../generic/browser-driver/IEDriverServer");
             driver = new InternetExplorerDriver();
+<<<<<<< HEAD
+        }
+            return driver;
+=======
+>>>>>>> 3808a15bb4cf1c8e953dc52d718675701942ab44
         }
 <<<<<<< HEAD
             return driver;
