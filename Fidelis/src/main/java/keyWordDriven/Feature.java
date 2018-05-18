@@ -11,7 +11,7 @@ import reporting.TestLogger;
 import java.io.IOException;
 import java.io.InvalidClassException;
 
-public class feature extends CommonAPI {
+public class Feature extends CommonAPI {
     public void language() throws Exception {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
