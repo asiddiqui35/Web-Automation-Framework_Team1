@@ -16,6 +16,7 @@
         <module>Fidelis</module>
         <module>BankOfAmerica</module>
         <module>Walmart</module>
+        <module>RestAPI</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -39,11 +40,23 @@
                 <artifactId>poi</artifactId>
                 <version>3.17</version>
             </dependency>
+            <!--google dependencies-->
             <dependency>
                 <groupId>com.google.api-client</groupId>
                 <artifactId>google-api-client</artifactId>
                 <version>1.22.0</version>
             </dependency>
+            <dependency>
+                <groupId>com.google.oauth-client</groupId>
+                <artifactId>google-oauth-client-jetty</artifactId>
+                <version>1.23.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.apis</groupId>
+                <artifactId>google-api-services-sheets</artifactId>
+                <version>v4-rev498-1.23.0</version>
+            </dependency>
+            <!--mongo dependency-->
             <dependency>
                 <groupId>org.mongodb</groupId>
                 <artifactId>mongo-java-driver</artifactId>

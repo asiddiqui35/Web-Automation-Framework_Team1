@@ -36,8 +36,6 @@ public class LoginPage extends CommonAPI{
     public void setEmail(WebElement email) {
         this.Email = email;
     }
-
-
     public void email() {
         getEmail().sendKeys("bmaya2013@gmail.com");
     }
@@ -47,7 +45,6 @@ public class LoginPage extends CommonAPI{
 
     public void clickingLogin() {
         Login.click();
-
     }
 }
 

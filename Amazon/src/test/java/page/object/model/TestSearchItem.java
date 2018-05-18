@@ -16,7 +16,11 @@
 //        SearchItems itemsToBeSearched = new SearchItems();
 //        String[] value = itemsToBeSearched.getDataFromExcelFile();
 //        for (int i = 0; i < value.length; i++) {
+
 //            searchFor(value[i]);
+
+//            searchfor(value[i]);
+
 //            submitSearchButton();
 //            clearInput();
 //        }

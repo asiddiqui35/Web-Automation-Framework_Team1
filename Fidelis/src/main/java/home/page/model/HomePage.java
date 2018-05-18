@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import reporting.TestLogger;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,9 +23,11 @@ public class HomePage extends CommonAPI {
     public WebElement getSearchInput() {
         return SearchInput;
     }
+
     public void setSearchInput(WebElement searchInput) {
         this.SearchInput = searchInput;
     }
+
     public WebElement getSearchBtn() {
         return searchBtn;
     }
@@ -37,6 +40,13 @@ public class HomePage extends CommonAPI {
 
     public void setList(List<WebElement> list) { this.list = list; }
 
+
+    public void checkLanguage()throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        clickOnCss("#dnn_dnnLANGUAGE_lblLanguage");
+    }
+
     public void clickPlan(WebDriver driver) throws InterruptedException {
         getSearchBtn().click();
         getSearchInput().clear();
@@ -44,27 +54,24 @@ public class HomePage extends CommonAPI {
         getSearchBtn().click();
         Thread.sleep(2000);
         driver.navigate().back();
-        Thread.sleep(2000);
     }
     public void searchDoctors(WebDriver driver) throws InterruptedException {
         getSearchBtn().click();
         getSearchInput().clear();
         getSearchInput().sendKeys("Doctors", Keys.ENTER);
         Thread.sleep(2000);
-        driver.navigate().back();
     }
     public void searchLocation(WebDriver driver) throws InterruptedException {
-        Thread.sleep(2000);
         getSearchBtn().click();
         getSearchInput().clear();
         getSearchInput().sendKeys("Locations", Keys.ENTER);
         Thread.sleep(2000);
-        driver.navigate().back();
     }
-    public void findNumLinkHomePage() throws Exception{
+    public void findNumLinkHomePage() throws Exception {
         List<WebElement> link = getList();
-        for (WebElement aa: link){
+        for (WebElement aa : link) {
             System.out.println(aa.getAttribute("href"));
+
         }
 
     }
