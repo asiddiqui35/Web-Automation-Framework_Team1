@@ -14,6 +14,4 @@ public void searchSoap(){ typeOnCss(".header-GlobalSearch-Input", "Soap");}
 public void searchBedsheet(){ typeOnCss(".header-GlobalSearch-Input", "Bedsheet");}
 public void searchFurniture(){ typeOnCss(".header-GlobalSearch-Input", "Furniture");}
 
-
-
 }
