@@ -447,7 +447,7 @@ public class CommonAPI {
     public void clearInputFieldById(String locator){
         driver.findElement(By.id(locator)).clear();
     }
-    }
+}
 
 
 
