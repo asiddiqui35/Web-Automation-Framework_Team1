@@ -14,13 +14,13 @@
 
     <test name = "Amazon">
         <classes>
-
-           <class name="page.object.model.TestJDBC"/>
-
-           <class name="page.object.model.TestJDBC"/>
-
-           <class name="page.object.model.TestAddToCart"/>
-
+            <!--<class name="test.data.driven1.TestItemSerchfromJDBCSerchfromJDBC"/>-->
+            <!--<class name="test.data.driven1.TestItemSerchfromJDBCSerchfromJDBC"/>-->
+            <!--<class name="homePage.TestSignIn"/>-->
+            <!--<class name="testgooglesheet.TestGoogleSheetPage"/>-->
+            <!--<class name="test.data.driven1.TestItemSerchfromJDBC"/>-->
+            <!--<class name="homePage.TestSearchItemExcel"/>-->
+            <class name="homePage.TestAddToCart"/>
         </classes>
     </test>
 

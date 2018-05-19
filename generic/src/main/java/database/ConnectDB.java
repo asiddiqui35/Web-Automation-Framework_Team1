@@ -2,6 +2,7 @@ package database;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
+import org.sqlite.JDBC;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-public class ConnectDB {
+public class ConnectDB extends JDBC {
     public static MongoDatabase mongoDatabase = null;
     public static Connection connect = null;
     public static Statement statement = null;
@@ -19,16 +20,7 @@ public class ConnectDB {
 
     public Properties loadProperties() throws IOException{
         Properties prop = new Properties();
-<<<<<<< HEAD
-
-        InputStream ism = new FileInputStream("/Users/kaniz/Web-Automation-Framework_Team1/Amazon/JDBCProperties/secret.properties");
-=======
-<<<<<<< HEAD
-        InputStream ism = new FileInputStream("/Users/selinatanha/Web-Automation-Framework_Team1/Walmart/SecretFolder/Secret.Properties");
-=======
-        InputStream ism = new FileInputStream("/Users/moynabegum/Web-Automation-Framework_Team1/Fidelis/jdbcProperties/secret.properties");
->>>>>>> 3808a15bb4cf1c8e953dc52d718675701942ab44
->>>>>>> 2480098f1eb5600d76110e5afaf1c62758b7e02a
+        InputStream ism = new FileInputStream("/Users/kaniz/Desktop/Web-Automation-Framework_Team1/Amazon/JDBCproperties/secret.properties");
         prop.load(ism);
         ism.close();
         return prop;
