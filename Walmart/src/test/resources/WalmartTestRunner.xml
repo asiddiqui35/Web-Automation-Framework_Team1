@@ -11,10 +11,13 @@
     <!--<parameter name = "browserVersion" value = "41"/>-->
     <parameter name = "url" value = "https://www.walmart.com"/>
 
-    <test name = "walmart home">
+    <test name = "walmart search">
         <classes>
             <!--<class name="page.object.model.TestHome"/>-->
-            <class name="TestKeyWord.TestKey"/>
+            <!--<class name="TestKeyWord.TestKey"/>-->
+            <!--<class name="googlesheet.TestGoogleSheet"/>-->
+            <class name="page.object.model.TestHomePageAsserts"/>
+
         </classes>
     </test>
 
