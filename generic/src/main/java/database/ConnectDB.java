@@ -2,6 +2,7 @@ package database;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
+import org.sqlite.JDBC;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-public class ConnectDB {
+public class ConnectDB extends JDBC {
     public static MongoDatabase mongoDatabase = null;
     public static Connection connect = null;
     public static Statement statement = null;
