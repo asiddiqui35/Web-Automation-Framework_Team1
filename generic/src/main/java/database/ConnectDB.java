@@ -20,7 +20,7 @@ public class ConnectDB extends JDBC {
 
     public Properties loadProperties() throws IOException{
         Properties prop = new Properties();
-        InputStream ism = new FileInputStream("/Users/kaniz/Desktop/Web-Automation-Framework_Team1/Amazon/JDBCproperties/secret.properties");
+        InputStream ism = new FileInputStream("/Users/moynabegum/Web-Automation-Framework_Team1/Fidelis/jdbcProperties/secret.properties");
         prop.load(ism);
         ism.close();
         return prop;

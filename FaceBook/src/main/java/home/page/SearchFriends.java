@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchFriends extends CommonAPI {
-    @FindBy(id="/html/body/div[1]/div[2]/div/div[1]/div/div/div/div[1]/div[2]/div/form/div/div/div/div/input[2]")
+    @FindBy(css="._1frb")
 
     public WebElement search;
 
