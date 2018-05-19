@@ -52,11 +52,11 @@ public class Feature extends CommonAPI {
         }
     }
 
-    public void featuresCall(WebDriver driver) throws Exception, InterruptedException {
-        ExcelFile excelReader = new ExcelFile();
-        String[] testSteps = excelReader.getDataFromExcelFileForFeaturesChoice();
-        for (int i = 1; i < testSteps.length; i++) {
-            select(testSteps[i], driver);
-        }
-    }
+//    public void featuresCall(WebDriver driver) throws Exception, InterruptedException {
+//       ExcelFile excelReader = new ExcelFile();
+//        String[] testSteps = excelReader.getDataFromExcelFileForFeaturesChoice();
+//        for (int i = 1; i < testSteps.length; i++) {
+//          select(testSteps[i], driver);
+//        }
+//    }
 }

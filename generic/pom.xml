@@ -54,5 +54,15 @@
             <groupId>com.relevantcodes</groupId>
             <artifactId>extentreports</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.google.http-client</groupId>
+            <artifactId>google-http-client-jackson2</artifactId>
+            <version>1.23.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.api-client</groupId>
+            <artifactId>google-api-client</artifactId>
+        </dependency>
     </dependencies>
 </project>

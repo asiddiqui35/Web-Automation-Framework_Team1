@@ -7,6 +7,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -137,7 +138,10 @@ public class CommonAPI {
             } else if (OS.equalsIgnoreCase("Windows")) {
                 System.setProperty("webdriver.chrome.driver", "../generic/driver/chromedriver");
             }
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--disable-notifications");
+            driver = new ChromeDriver(options);
+
         } else if (browserName.equalsIgnoreCase("firefox")) {
             if (OS.equalsIgnoreCase("OS X")) {
 
