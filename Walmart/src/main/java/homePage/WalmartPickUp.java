@@ -19,7 +19,6 @@ public class WalmartPickUp extends CommonAPI{
         pickUpToday.click();
         shopToys.click();
         selectUNO.click();
-
     }
 }
 

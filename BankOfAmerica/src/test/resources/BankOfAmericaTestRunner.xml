@@ -17,7 +17,8 @@
             <!--<class name="testHome.TestLogIn"/>-->
             <!--<class name="testHome.SearchTest"/>-->
             <!--<class name="testDropDown.TestDropDown"/>-->
-            <class name="testDataDriven.TestServices"/>
+            <!--<class name="testDataDriven.TestServices"/>-->
+            <class name="testDataDriven.TestGoogleSheetsPage"/>
         </classes>
     </test>
 </suite>

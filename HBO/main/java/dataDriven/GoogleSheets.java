@@ -9,8 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static googleAPIs.GoogleSheetsReader.getSheetsService;
+import static googleAPIs.GoogleShetsReader2.getSheetsService;
 import static org.openqa.selenium.support.How.ID;
 import static org.openqa.selenium.support.How.XPATH;
 
@@ -43,18 +42,18 @@ public class GoogleSheets extends CommonAPI {
             List<String> actual = new ArrayList<>();
             for (List row : col2Value) {
                 sleepFor(1);
-                inputValueInTextBoxByWebElement(account, row.get(1).toString());
-                inputValueInTextBoxByWebElement(password, row.get(2).toString());
+                //inputValueInTextBoxByWebElement(account, row.get(1).toString());
+                //inputValueInTextBoxByWebElement(password, row.get(2).toString());
                 sleepFor(1);
                 //actual.add(getCurrentPageTitle());
-                actual.add(getTextByWebElement(signInErrorMesage));
-                System.out.println(getTextByWebElement(signInErrorMesage));
-                clearInputBox(account);
-                clearInputBox(password);
+//                actual.add(getTextByWebElement(signInErrorMesage));
+//                System.out.println(getTextByWebElement(signInErrorMesage));
+//                clearInputBox(account);
+//                clearInputBox(password);
                 sleepFor(1);
             }
             return actual;
         }
-    }
+}
 
 
