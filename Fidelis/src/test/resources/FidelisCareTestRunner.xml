@@ -21,7 +21,7 @@
             <!--<class name="home.page.model.signintest"/>-->
             <!--<class name ="TestdataDriven.TestJDBC"/>-->
             <!--<class name="testkeyWordriven.testFeature"/>-->
-            <class name="googleSheet.TestGoogleSheet"/>
+            <class name="TestdataDriven.TestGoogleSheets"/>
         </classes>
     </test>
 

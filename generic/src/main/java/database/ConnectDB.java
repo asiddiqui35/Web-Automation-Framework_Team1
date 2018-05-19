@@ -19,14 +19,7 @@ public class ConnectDB {
 
     public Properties loadProperties() throws IOException{
         Properties prop = new Properties();
-<<<<<<< HEAD
-
         InputStream ism = new FileInputStream("/Users/moynabegum/Web-Automation-Framework_Team1/Fidelis/jdbcProperties/secret.properties");
-
-
-=======
-        InputStream ism = new FileInputStream("/Users/moynabegum/Web-Automation-Framework_Team1/Fidelis/jdbcProperties/secret.properties");
->>>>>>> 3808a15bb4cf1c8e953dc52d718675701942ab44
         prop.load(ism);
         ism.close();
         return prop;
