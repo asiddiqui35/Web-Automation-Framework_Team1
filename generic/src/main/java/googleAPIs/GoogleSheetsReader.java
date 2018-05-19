@@ -22,37 +22,36 @@ import java.util.Collections;
 import java.util.List;
 
 public class GoogleSheetsReader {
-        private static final String APPLICATION_NAME = "Google Sheets API Java Quickstart";
-        private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
-        private static final String CREDENTIALS_FOLDER = "credentials"; // Directory to store user credentials.
+    private static final String APPLICATION_NAME = "Google Sheets API Java Quickstart";
+    private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
+    private static final String CREDENTIALS_FOLDER = "credentials"; // Directory to store user credentials.
 
-        /**
-         * Global instance of the scopes required by this quickstart.
-         * If modifying these scopes, delete your previously saved credentials/ folder.
-         */
-        private static final List<String> SCOPES = Collections.singletonList(SheetsScopes.SPREADSHEETS_READONLY);
-        private static final String CLIENT_SECRET_DIR = "client_secret.json";
+    /**
+     * Global instance of the scopes required by this quickstart.
+     * If modifying these scopes, delete your previously saved credentials/ folder.
+     */
+    private static final List<String> SCOPES = Collections.singletonList(SheetsScopes.SPREADSHEETS_READONLY);
+    private static final String CLIENT_SECRET_DIR = "/client_secret.json";
 
-        /**
-         * Creates an authorized Credential object.
-         * @param HTTP_TRANSPORT The network HTTP Transport.
-         * @return An authorized Credential object.
-         * @throws IOException If there is no client_secret.
-         */
-        private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT) throws IOException {
-            // Load client secrets.
-            InputStream in = GoogleSheetsReader.class.getResourceAsStream(CLIENT_SECRET_DIR);
-            GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
+    /**
+     * Creates an authorized Credential object.
+     * @param HTTP_TRANSPORT The network HTTP Transport.
+     * @return An authorized Credential object.
+     * @throws IOException If there is no client_secret.
+     */
+    private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT) throws IOException {
+        // Load client secrets.
+        InputStream in = GoogleSheetsReader.class.getResourceAsStream(CLIENT_SECRET_DIR);
+        GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
 
-            // Build flow and trigger user authorization request.
-            GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
-                    HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES)
-                    .setDataStoreFactory(new FileDataStoreFactory(new java.io.File(CREDENTIALS_FOLDER)))
-                    .setAccessType("offline")
-                    .build();
-            return new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("user");
-        }
-
+        // Build flow and trigger user authorization request.
+        GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
+                HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES)
+                .setDataStoreFactory(new FileDataStoreFactory(new java.io.File(CREDENTIALS_FOLDER)))
+                .setAccessType("offline")
+                .build();
+        return new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize("user");
+    }
         /**
          * Prints the names and majors of students in a sample spreadsheet:
          * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
@@ -75,7 +74,7 @@ public class GoogleSheetsReader {
                 System.out.println("Name, Major");
                 for (List row : values) {
                     // Print columns A and E, which correspond to indices 0 and 4.
-                    System.out.printf("%s, %s\n", row.get(0), row.get(4));
+                    System.out.printf("%s, %s", row.get(0), row.get(4));
                 }
             }
         }

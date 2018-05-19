@@ -3,8 +3,8 @@
 
 <suite name="Amazon Automation Script " parallel="false" >
 
-    <!--<parameter name = "useSauceLabs" value = "false"/>-->
-    <!--<parameter name = "userName" value = "rahmanww"/>-->
+    <parameter name = "useSauceLabs" value = "true"/>
+    <parameter name = "userName" value = "kanizruma101"/>
     <!--<parameter name = "key" value = "6f132866-de72-43fd-b49a-e6f81d26bfe3"/>-->
     <!--<parameter name = "os" value = "WIN8"/>-->
     <parameter name = "browserName" value = "chrome"/>
@@ -14,7 +14,13 @@
 
     <test name = "Amazon">
         <classes>
-           <class name="page.object.model.SignIn"/>
+            <!--<class name="test.data.driven1.TestItemSerchfromJDBCSerchfromJDBC"/>-->
+            <!--<class name="test.data.driven1.TestItemSerchfromJDBCSerchfromJDBC"/>-->
+            <!--<class name="homePage.TestSignIn"/>-->
+            <!--<class name="testgooglesheet.TestGoogleSheetPage"/>-->
+            <!--<class name="test.data.driven1.TestItemSerchfromJDBC"/>-->
+            <!--<class name="homePage.TestSearchItemExcel"/>-->
+            <class name="homePage.TestAddToCart"/>
         </classes>
     </test>
 

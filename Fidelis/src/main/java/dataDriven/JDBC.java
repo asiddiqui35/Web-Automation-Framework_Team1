@@ -32,7 +32,6 @@ public class JDBC extends CommonAPI {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         this.searchBox = searchBox;
     }
-
     ConnectDB connectDB = new ConnectDB();
     public void readingfromsqlNsearching() throws Exception{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));

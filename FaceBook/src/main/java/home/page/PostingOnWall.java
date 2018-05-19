@@ -2,12 +2,35 @@ package home.page;
 
 import base.CommonAPI;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import java.security.Key;
 
 public class PostingOnWall extends CommonAPI {
+    @FindBy(css="._1mf")
+    WebElement postBox;
+    public WebElement getPostBox() {
+        return postBox;
+    }
 
-    public void postStatus(){
-        driver.findElement(By.xpath("//*[@id=\"js_2k\"]/div[1]/div/div[1]/div[2]/div/div/div")).sendKeys("Hello Everyone");
-        driver.findElement(By.cssSelector("#js_2k > div._1j2v > div._2dck._4-u3._57d8 > div > div._ohf.rfloat > div > span._3_xb > button")).click();
-
+    public void setPost(WebElement postBox) {
+        this.postBox = postBox;
+    }
+    public void postOnWall(){
+        getPostBox().sendKeys("hello");
+    }
+    public void clickOnHome(){
+        clickByXpath("//a[text()='Home']");
+    }
+    public void cliOnMakePost(){
+        clickByXpath("//span[text()='Make Post']");
+    }
+    public void logIn() throws InterruptedException {
+        LoginPage lg = PageFactory.initElements(driver,LoginPage.class);
+        lg.email();
+        lg.passWord();
+        lg.clickingLogin();
     }
 }

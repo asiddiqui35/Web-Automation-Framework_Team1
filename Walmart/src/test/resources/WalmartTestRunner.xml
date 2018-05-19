@@ -17,7 +17,8 @@
             <!--<class name="TestKeyWord.TestKey"/>-->
             <!--<class name="googlesheet.TestGoogleSheet"/>-->
             <class name="page.object.model.TestHomePageAsserts"/>
-
+            <!--<class name="TestHome"/>-->
+            <class name="TestKeyWord.TestKey"/>
         </classes>
     </test>
 
